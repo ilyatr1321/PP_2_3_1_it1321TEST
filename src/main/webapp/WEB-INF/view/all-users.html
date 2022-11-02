@@ -21,14 +21,16 @@
         <td th:text="${user.getSurname()}">VALUE</td>
         <td th:text="${user.getDepartment()}">VALUE</td>
         <td th:text="${user.getSalary()}">VALUE</td>
+
         <td><form th:method="GET" th:action="@{/{id}/edit(id=${user.getId()})}">
             <input type="submit" value="Edit"/>
         </form> </td>
+
         <td><form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
             <input type="submit" value="Delete"/>
         </form> </td>
-        </form>
 
+        </form>
     </tr>
 </table>
 <br>

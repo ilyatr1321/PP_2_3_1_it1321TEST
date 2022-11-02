@@ -19,7 +19,7 @@ public class UserDAOImpl implements UserDAO{
     public List<User> getAllUsers() {
 
         return entityManager.createQuery(
-                "select User from User ", User.class).getResultList();
+                "select u from User u ", User.class).getResultList();
     }
 
     @Override
